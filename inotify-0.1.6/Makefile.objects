@@ -1,0 +1,8 @@
+inotify.lo: /root/test3/php-inotify-0.1.6/inotify-0.1.6/inotify.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/root/test3/php-inotify-0.1.6/inotify-0.1.6 $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /root/test3/php-inotify-0.1.6/inotify-0.1.6/inotify.c -o inotify.lo 
+$(phplibdir)/inotify.la: ./inotify.la
+	$(LIBTOOL) --mode=install cp ./inotify.la $(phplibdir)
+
+./inotify.la: $(shared_objects_inotify) $(INOTIFY_SHARED_DEPENDENCIES)
+	$(LIBTOOL) --mode=link $(CC) $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) $(LDFLAGS) -o $@ -export-dynamic -avoid-version -prefer-pic -module -rpath $(phplibdir) $(EXTRA_LDFLAGS) $(shared_objects_inotify) $(INOTIFY_SHARED_LIBADD)
+

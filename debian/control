@@ -1,0 +1,17 @@
+Source: php-inotify
+Section: web
+Priority: optional
+Maintainer: root <root@debclient>
+Build-Depends: debhelper (>= 7), po-debconf, xsltproc , php5-dev  
+Standards-Version: 3.9.1
+
+Package: php5-inotify
+Architecture: any
+Depends: ${shlibs:Depends}, ${php:Depends}, ${misc:Depends}
+Description: inotify module for PHP 5
+ Inotify
+ .
+ The inotify extension allows to use inotify functions in a PHP
+ script.
+
+

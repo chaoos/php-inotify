@@ -1,0 +1,6 @@
+php-inotify (0.1.6-1) unstable; urgency=low
+
+  * Initial Release (Closes: #<ITP bug number>).
+
+ -- root <root@debclient>  Wed, 07 Feb 2018 14:17:38 +0100
+
